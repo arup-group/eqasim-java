@@ -1,4 +1,4 @@
-package org.eqasim.ile_de_france;
+package org.eqasim.ile_de_france.drt;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

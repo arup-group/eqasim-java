@@ -22,9 +22,12 @@ import org.matsim.core.config.ConfigGroup;
 import org.matsim.core.controler.Controler;
 import org.matsim.core.scenario.ScenarioUtils;
 
+import org.eqasim.core.simulation.analysis.EqasimAnalysisModule;
+import org.eqasim.core.simulation.mode_choice.EqasimModeChoiceModule;
 
-public class RunMatsim_combine {
-	private final static Logger logger = LogManager.getLogger(RunMatsim_combine.class);
+
+public class RunEqasimDRT {
+	private final static Logger logger = LogManager.getLogger(RunEqasimDRT.class);
 
 	public static void main(String[] args) throws ConfigurationException {
 		// load config
@@ -36,7 +39,10 @@ public class RunMatsim_combine {
 				.build();
 				
 		IDFConfigurator configurator = new IDFConfigurator();
-		Config config = ConfigUtils.loadConfig(cmd.getOptionStrict("config-path"), configurator.getConfigGroups());
+		Config config = ConfigUtils.loadConfig(cmd.getOptionStrict("config-path"),  
+											//    new MultiModeDrtConfigGroup(),
+											//    new DvrpConfigGroup(), 
+											   configurator.getConfigGroups());
 		
 
 		cmd.applyConfiguration(config);
@@ -50,9 +56,9 @@ public class RunMatsim_combine {
 		Controler controler = DrtControlerCreator.createControler(config, false);
 		// Controler controller = new Controler(scenario);
 		// configurator.configureController(controller);
-		// controller.addOverridingModule(new EqasimAnalysisModule());
-		// controller.addOverridingModule(new EqasimModeChoiceModule());
-		// controller.addOverridingModule(new IDFModeChoiceModule(cmd));
+		controler.addOverridingModule(new EqasimAnalysisModule());
+		controler.addOverridingModule(new EqasimModeChoiceModule());
+		controler.addOverridingModule(new IDFModeChoiceModule(cmd));
 		controler.addOverridingModule(new MultiModeDrtModule());
 		controler.addOverridingModule(new DvrpModule());
 

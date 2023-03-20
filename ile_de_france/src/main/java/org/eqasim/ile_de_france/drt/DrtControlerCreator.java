@@ -70,6 +70,9 @@ public final class DrtControlerCreator {
 		controler.addOverridingModule(new DvrpModule());
 		controler.addOverridingModule(new MultiModeDrtModule());
 		controler.configureQSimComponents(DvrpQSimComponents.activateAllModes(multiModeDrtConfig));
+		// add the module for eqasim
+		// controller.addOverridingModule(new EqasimAnalysisModule());
+		// controller.addOverridingModule(new EqasimModeChoiceModule());
 
 		if (otfvis) {
 			controler.addOverridingModule(new OTFVisLiveModule());
