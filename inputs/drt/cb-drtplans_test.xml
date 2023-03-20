@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE population SYSTEM "http://www.matsim.org/files/dtd/population_v6.dtd">
+
+<population desc="population written from streaming">
+
+
+
+<!-- ====================================================================== -->
+
+	<person id="12052000_12052000_100">
+		<plan score="112.83915061460992" selected="yes">
+			<activity type="home" link="1655" x="457685.4705887371" y="5740004.041388335" end_time="07:48:38" >
+			</activity>
+			<leg mode="drt">
+			</leg>
+			<activity type="work" link="9690" x="456223.8089950741" y="5732282.2554312255" end_time="15:31:17" >
+			</activity>
+			<leg mode="drt">
+			</leg>
+			<activity type="home" link="1655" x="457685.4705887371" y="5740004.041388335" >
+			</activity>
+		</plan>
+
+	</person>
+
+<!-- ====================================================================== -->
+
+	<person id="12052000_12052000_10006">
+		<plan score="117.53754967340346" selected="yes">
+			<activity type="home" link="7970" x="454255.1210336458" y="5736819.585037125" end_time="07:22:07" >
+			</activity>
+			<leg mode="drt">
+			</leg>
+			<activity type="work" link="780" x="456841.2200838027" y="5734761.262163742" end_time="15:21:05" >
+			</activity>
+			<leg mode="drt">
+			</leg>
+			<activity type="home" link="7970" x="454255.1210336458" y="5736819.585037125" >
+			</activity>
+		</plan>
+
+	</person>
+
+<!-- ====================================================================== -->
+
+	<person id="12052000_12052000_1002">
+		<plan score="121.0365565728833" selected="yes">
+			<activity type="home" link="5146" x="452735.0249250985" y="5732744.258256545" end_time="07:34:07" >
+			</activity>
+			<leg mode="drt">
+			</leg>
+			<activity type="work" link="10952" x="454519.58544021053" y="5734308.292099375" end_time="16:01:04" >
+			</activity>
+			<leg mode="drt">
+			</leg>
+			<activity type="home" link="5146" x="452735.0249250985" y="5732744.258256545" >
+			</activity>
+		</plan>
+
+	</person>
+
+<!-- ====================================================================== -->
+
+	<person id="12052000_12052000_10033">
+		<plan score="105.87289134587908" selected="yes">
+			<activity type="home" link="720" x="454187.3741642981" y="5733684.323885416" end_time="07:33:57" >
+			</activity>
+			<leg mode="drt" trav_time="00:36:23">
+			</leg>
+			<activity type="work" link="8639" x="454992.6879005153" y="5732539.43459969" end_time="08:03:39" >
+			</activity>
+			<leg mode="drt">
+			</leg>
+			<activity type="work" link="10261" x="455927.8680092795" y="5727875.649825024" end_time="15:33:07" >
+			</activity>
+			<leg mode="drt">
+			</leg>
+			<activity type="work" link="8639" x="454992.6879005153" y="5732539.43459969" end_time="16:02:23" >
+			</activity>
+			<leg mode="drt">
+			</leg>
+			<activity type="home" link="720" x="454187.3741642981" y="5733684.323885416" >
+			</activity>
+		</plan>
+
+	</person>
+
+<!-- ====================================================================== -->
+
+	<person id="12052000_12052000_10047">
+		<plan score="111.29885831990227" selected="yes">
+			<activity type="home" link="3125" x="451542.07019889925" y="5734141.862175951" end_time="07:40:24" >
+			</activity>
+			<leg mode="drt">
+			</leg>
+			<activity type="work" link="3222" x="453568.3498347992" y="5732150.94799711" end_time="08:13:20" >
+			</activity>
+			<leg mode="drt">
+			</leg>
+			<activity type="work" link="3248" x="453681.9094125228" y="5734148.765209865" end_time="14:52:14" >
+			</activity>
+			<leg mode="drt">
+			</leg>
+			<activity type="work" link="3222" x="453568.3498347992" y="5732150.94799711" end_time="15:35:25" >
+			</activity>
+			<leg mode="drt">
+			</leg>
+			<activity type="home" link="3125" x="451542.07019889925" y="5734141.862175951" >
+			</activity>
+		</plan>
+
+	</person>
+
+<!-- ====================================================================== -->
+
+	<person id="12052000_12052000_10048">
+		<plan score="123.20150319361407" selected="yes">
+			<activity type="home" link="1852" x="452751.95737807086" y="5734662.774418969" end_time="06:58:31" >
+			</activity>
+			<leg mode="drt">
+			</leg>
+			<activity type="work" link="7527" x="455547.58655957534" y="5735073.809011681" end_time="15:47:41" >
+			</activity>
+			<leg mode="drt">
+			</leg>
+			<activity type="home" link="1852" x="452751.95737807086" y="5734662.774418969" >
+			</activity>
+		</plan>
+
+	</person>
+
+<!-- ====================================================================== -->
+
+	<person id="12052000_12052000_10073">
+		<plan score="126.60539868314373" selected="yes">
+			<activity type="home" link="5305" x="455528.91280614905" y="5734229.388500857" end_time="07:01:24" >
+			</activity>
+			<leg mode="drt">
+			</leg>
+			<activity type="work" link="7828" x="453563.120270489" y="5734598.298518842" end_time="15:36:02" >
+			</activity>
+			<leg mode="drt">
+			</leg>
+			<activity type="home" link="5305" x="455528.91280614905" y="5734229.388500857" >
+			</activity>
+		</plan>
+
+	</person>
+
+<!-- ====================================================================== -->
+
+	<person id="12052000_12052000_10080">
+		<plan score="117.52260872557116" selected="yes">
+			<activity type="home" link="1852" x="452751.95737807086" y="5734662.774418969" end_time="08:16:27" >
+			</activity>
+			<leg mode="drt">
+			</leg>
+			<activity type="work" link="2274" x="455860.18845334434" y="5730090.2646531975" end_time="16:34:14" >
+			</activity>
+			<leg mode="drt">
+			</leg>
+			<activity type="home" link="1852" x="452751.95737807086" y="5734662.774418969" >
+			</activity>
+		</plan>
+
+	</person>
+
+<!-- ====================================================================== -->
+
+	<person id="12052000_12052000_10095">
+		<plan score="124.27101330561544" selected="yes">
+			<activity type="home" link="8590" x="457127.4579226989" y="5735018.329735481" end_time="07:09:06" >
+			</activity>
+			<leg mode="drt">
+			</leg>
+			<activity type="work" link="1148" x="454877.8649584007" y="5735087.739314684" end_time="16:07:42" >
+			</activity>
+			<leg mode="drt">
+			</leg>
+			<activity type="home" link="8590" x="457127.4579226989" y="5735018.329735481" >
+			</activity>
+		</plan>
+
+	</person>
+
+</population>
