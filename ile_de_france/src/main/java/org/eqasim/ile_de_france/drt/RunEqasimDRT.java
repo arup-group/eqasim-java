@@ -39,11 +39,13 @@ public class RunEqasimDRT {
 				.build();
 				
 		IDFConfigurator configurator = new IDFConfigurator();
-		Config config = ConfigUtils.loadConfig(cmd.getOptionStrict("config-path"),  
-											//    new MultiModeDrtConfigGroup(),
-											//    new DvrpConfigGroup(), 
-											   configurator.getConfigGroups());
+		Config config = ConfigUtils.loadConfig(
+										cmd.getOptionStrict("config-path"),  
+										configurator.getConfigGroups()
+																			);
 		
+		config.addModule(new MultiModeDrtConfigGroup());
+		config.addModule(new DvrpConfigGroup());
 
 		cmd.applyConfiguration(config);
 
