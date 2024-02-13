@@ -117,8 +117,8 @@ public class OsmHbefaMapping {
             type += "-Nat.";
         }
         if (hbfeaMap.get(type) == null) {
-            return null;
-            //throw new RuntimeException("'"+ type +"' not in hbefa map");
+            // return null;
+            throw new RuntimeException("'"+ type +"' not in hbefa map");
         }
         int min_speed = hbfeaMap.get(type).min;
         int max_speed = hbfeaMap.get(type).max;
