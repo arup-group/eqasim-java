@@ -77,6 +77,11 @@ public class OsmHbefaMapping {
         mapping.put("residential", new Hbefa("Access",30,50));
         mapping.put("service", new Hbefa("Access",30,50));
         mapping.put("living", new Hbefa("Access",30,50));
+        mapping.put("pedestrian", new Hbefa("Access",30,50));
+        mapping.put("footway", new Hbefa("Access",30,50));
+        mapping.put("construction", new Hbefa("Access",30,50));
+        mapping.put("busway", new Hbefa("Access",30,50));
+        mapping.put("cycleway", new Hbefa("Access",30,50));
 
         return mapping;
     }
