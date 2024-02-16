@@ -40,7 +40,7 @@ import org.matsim.contrib.emissions.EmissionUtils;
 
 public class OsmHbefaMapping {
     private static final int MAX_SPEED = 130;
-    private static final String OSM_HIGHWAY_TAG = "osm:way:highway";
+    private static final String OSM_HIGHWAY_TAG = "type";
     Map<String, Hbefa> hbfeaMap = new HashMap<>();
 
     public static class Hbefa {

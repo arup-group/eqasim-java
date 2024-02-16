@@ -105,7 +105,7 @@ public class RunComputeEmissionsEvents {
 
         eventsManager.initProcessing();
         MatsimEventsReader matsimEventsReader = new MatsimEventsReader(eventsManager);
-        matsimEventsReader.readFile( outputDirectory + "./output_events.xml.gz" );
+        matsimEventsReader.readFile( outputDirectory + "output_events.xml.gz" );
         eventsManager.finishProcessing();
 
         emissionEventWriter.closeFile();
