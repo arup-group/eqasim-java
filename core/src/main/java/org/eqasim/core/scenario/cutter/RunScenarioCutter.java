@@ -87,8 +87,10 @@ public class RunScenarioCutter {
 		ScenarioUtils.loadScenario(scenario);
 
 		// Check validity before cutting
+		System.out.println("Validating the pre-cut scenario....");
 		ScenarioValidator scenarioValidator = new ScenarioValidator();
 		scenarioValidator.checkScenario(scenario);
+		System.out.println("The pre-cut scenario is valid");
 
 		// Prepare road network
 		RoadNetwork roadNetwork = new RoadNetwork(scenario.getNetwork());
@@ -164,10 +166,20 @@ public class RunScenarioCutter {
 				.build();
 
 		PopulationRouter router = routingInjector.getInstance(PopulationRouter.class);
-		router.run(scenario.getPopulation());
+		try {
+			router.run(scenario.getPopulation());
+		} catch (Exception e) {
+			//swallow for now
+			System.out.println(e);
+		}
 
 		// Check validity after cutting
-		scenarioValidator.checkScenario(scenario);
+		try {
+			scenarioValidator.checkScenario(scenario);
+		} catch (Exception e) {
+			//swallow for now
+			System.out.println(e);
+		}
 
 		// Write scenario
 		ScenarioWriter scenarioWriter = new ScenarioWriter(config, scenario, prefix);

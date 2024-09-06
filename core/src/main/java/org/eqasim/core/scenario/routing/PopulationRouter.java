@@ -1,9 +1,6 @@
 package org.eqasim.core.scenario.routing;
 
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.eqasim.core.misc.ParallelProgress;
@@ -71,10 +68,11 @@ public class PopulationRouter {
 			this.progress = progress;
 		}
 
-		@Override
+        @Override
 		public void run() {
 			List<Person> localTasks = new LinkedList<>();
 			PlanRouter router = routerProvider.get();
+			Map<Plan, RuntimeException> badPlans = new HashMap<>();
 
 			do {
 				localTasks.clear();
@@ -85,10 +83,31 @@ public class PopulationRouter {
 					}
 				}
 
+				RuntimeException lastException = null;
+				int goodPlanCount = 0;
 				for (Person person : localTasks) {
 					for (Plan plan : person.getPlans()) {
-						router.run(plan, replaceExistingRoutes, modes);
+						try {
+							router.run(plan, replaceExistingRoutes, modes);
+							System.out.println(String.format("Plan '%s' is good...", plan));
+							goodPlanCount++;
+						} catch (RuntimeException e) {
+							badPlans.put(plan, e);
+							System.err.println(String.format("Error routing plan for agent %s", person.getId()));
+							System.err.println(String.format("The problematic plan is %s", plan.getId()));
+							System.err.println(String.format("The problematic plan is %s", plan));
+							lastException = e;
+						}
 					}
+				}
+				if (lastException != null) {
+					System.err.println(String.format(
+							"!!! %s plans had errors (there were %s good plans)",
+							badPlans.size(),
+							goodPlanCount)
+					);
+					System.err.println(badPlans);
+					throw lastException;
 				}
 
 				progress.update(localTasks.size());

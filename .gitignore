@@ -6,3 +6,6 @@ dependency-reduced-pom.xml
 *.iml
 *.idea
 simulation_output
+.mvn
+lib
+**/.DS_Store
